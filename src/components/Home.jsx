@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Search from "./Search"
-import "../Home.css"
+import "../styles/Home.css"
 import CreateList from './CreateList'
 import MovieCard from './MovieCard'
 

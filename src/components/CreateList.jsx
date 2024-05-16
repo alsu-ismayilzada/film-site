@@ -1,5 +1,5 @@
 import React from 'react'
-import "../CreateList.css"
+import "../styles/CreateList.css"
 
 const CreateList = () => {
   return (
