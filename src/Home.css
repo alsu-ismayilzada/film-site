@@ -1,0 +1,29 @@
+.home{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.search{
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+}
+input{
+    width: 200px;
+    height: 25px;
+}
+.searchBtn{
+    width: 80px;
+    height: 30px;
+    background-color: rgb(10, 10, 179);
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+.movies{
+    width: 70vw;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+
+}
