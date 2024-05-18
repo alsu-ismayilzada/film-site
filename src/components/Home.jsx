@@ -25,7 +25,8 @@ const Home = () => {
       <CreateList/>
       <div className='movies'>
         {movies.map((movie, index) => (
-    <MovieCard key={index} img={movie.Poster} name={movie.Title} />
+      <MovieCard key={index} img={movie.Poster} name={movie.Title} />
+      
       ))}
         
       </div>

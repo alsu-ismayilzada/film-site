@@ -1,12 +1,21 @@
-import Home from "./Home"
-import "../styles/App.css"
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from '../components/Home';
+import Basket from '../components/Basket';
+import '../styles/App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-     <Home />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/basket" element={<Basket />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
