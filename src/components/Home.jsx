@@ -1,37 +1,41 @@
-import React, { useState } from 'react'
-import Search from "./Search"
-import "../styles/Home.css"
-import CreateList from './CreateList'
-import MovieCard from './MovieCard'
+import React, { useState, useEffect } from 'react';
+import Search from "./Search";
+import "../styles/Home.css";
+import CreateList from './CreateList';
+import {useDispatch ,useSelector } from 'react-redux';
+import MovieCard from './MovieCard';
+import { searchMovies } from '../redux/moviesSearchSlice';
+
 
 const Home = () => {
- const[movies, setMovies] = useState([]);
+  const inpValue = useSelector((state) => state.inputValue);
+  const moviesSearchList = useSelector((state) => state.moviesSearch);
+  const dispatch = useDispatch();
 
-
- fetch ("https://www.omdbapi.com/?s=godfather&apikey=7c0a2b78")
-.then(res => res.json())
-.then(data =>{
-    console.log(data);
-    if (data.Search) {
-      setMovies(data.Search);
-    }
-
-    });
-    
+  useEffect(() => {
+    fetch(`https://www.omdbapi.com/?s=${inpValue}&apikey=7c0a2b78&limit=10`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.Search) {
+          console.log(data.Search);
+          dispatch(searchMovies(inpValue));
+        }
+      });
+  }, []); 
 
   return (
     <div className='home'>
       <div className='footer'>
-      <Search/>
-      <CreateList/>
+        <Search />
+        <CreateList />
       </div>
       <div className='movies'>
-        {movies.map((movie, index) => (
-      <MovieCard key={index} img={movie.Poster} name={movie.Title} />
-      ))}
+        {moviesSearchList.map((movie, index) => (
+          <MovieCard key={index} img={movie.Poster} name={movie.Title} />
+        ))}
       </div>
     </div>
   )
 }
 
-export default Home
+export default Home;

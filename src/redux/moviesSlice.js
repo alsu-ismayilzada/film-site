@@ -1,4 +1,3 @@
-// src/redux/moviesSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = [];
