@@ -8,6 +8,8 @@
     border: 1px solid gray;
     border-radius: 3px;
     background-color: rgb(248, 248, 248);
+    position: fixed;
+    right: 50px;
 }
 .create-list input{
     width: 100%;
@@ -28,4 +30,11 @@
     color: white;
     border-radius: 3px;
     border: none;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.movie-list{
+    width: 100%;
 }

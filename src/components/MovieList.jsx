@@ -7,7 +7,7 @@ const MovieList = ({ list }) => {
       <h2>{list.name}</h2>
       <ul className='list'>
         {list.movies.map((movie, index) => (
-          <li key={index}>{movie}</li>
+          <li key={index}>{movie.name}</li>
         ))}
       </ul>
     </div>

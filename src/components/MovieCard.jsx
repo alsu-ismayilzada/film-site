@@ -1,18 +1,14 @@
 // src/components/MovieCard.js
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addMovieToList } from '../redux/listSlice';
+import { useDispatch } from 'react-redux';
+import { addMovie } from '../redux/moviesSlice';
 import '../styles/MovieCard.css';
 
 const MovieCard = (props) => {
   const dispatch = useDispatch();
-  const lists = useSelector((state) => state.lists);
 
   const handleAddToList = () => {
-    const listName = lists.length > 0 ? lists[lists.length - 1].name : null;
-    if (listName) {
-      dispatch(addMovieToList({ listName, movie: props.name }));
-    }
+    dispatch(addMovie({ name: props.name, poster: props.poster }));
   };
 
   return (

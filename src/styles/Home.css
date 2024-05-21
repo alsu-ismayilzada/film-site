@@ -1,12 +1,11 @@
 .home{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    
 }
 .search{
     display: flex;
     width: 300px;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 input{
     width: 200px;
@@ -19,6 +18,11 @@ input{
     color: white;
     border-radius: 3px;
     border: none;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .movies{
     width: 70vw;

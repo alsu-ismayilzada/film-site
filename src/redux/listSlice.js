@@ -1,23 +1,17 @@
 // src/redux/listSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialState = [];
+
 const listSlice = createSlice({
   name: 'lists',
-  initialState: [],
+  initialState,
   reducers: {
     addList: (state, action) => {
-      state.push({ name: action.payload, movies: [] });
-    },
-    addMovieToList: (state, action) => {
-      const { listName, movie } = action.payload;
-      const list = state.find(list => list.name === listName);
-      if (list) {
-        list.movies.push(movie);
-      }
+      state.push({ name: action.payload.name, movies: action.payload.movies });
     },
   },
 });
 
-export const { addList, addMovieToList } = listSlice.actions;
+export const { addList } = listSlice.actions;
 export default listSlice.reducer;
-

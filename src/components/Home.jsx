@@ -21,14 +21,14 @@ const Home = () => {
 
   return (
     <div className='home'>
+      <div className='footer'>
       <Search/>
       <CreateList/>
+      </div>
       <div className='movies'>
         {movies.map((movie, index) => (
       <MovieCard key={index} img={movie.Poster} name={movie.Title} />
-      
       ))}
-        
       </div>
     </div>
   )
