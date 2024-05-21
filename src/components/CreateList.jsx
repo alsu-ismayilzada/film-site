@@ -37,7 +37,7 @@ const CreateList = () => {
       />
       <ul className='movie-list'>
       {movies.map((movie, index) => (
-        <div className='list-element'><li key={index}>{movie.name}</li><div className='deleteBtn' onClick={()=> handleDeleteElement(movie.index)}>x</div></div>
+        <div className='list-element'><li key={index}>{movie.name}</li><div className='deleteBtn' onClick={()=> handleDeleteElement(index)}>x</div></div>
       ))}
     </ul>
       <button className='saveBtn' onClick={handleSaveList}>
