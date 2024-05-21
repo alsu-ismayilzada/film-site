@@ -1,0 +1,8 @@
+.MovieList{
+    width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(197, 245, 245);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}

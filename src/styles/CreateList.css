@@ -38,3 +38,22 @@
 .movie-list{
     width: 100%;
 }
+.deleteBtn{
+    border: 0.5px solid #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: red;
+    color: #fff;
+}
+.deleteBtn:hover{
+    cursor: pointer;
+}
+.list-element{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    
+}

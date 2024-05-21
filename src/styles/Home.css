@@ -1,6 +1,9 @@
 .home{
     
 }
+button{
+    cursor: pointer;
+}
 .search{
     display: flex;
     width: 300px;

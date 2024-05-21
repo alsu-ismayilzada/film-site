@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { addList } from '../redux/listSlice';
 import { clearMovies } from '../redux/moviesSlice';
+import { deleteElement } from '../redux/moviesSlice';
 import '../styles/CreateList.css';
 
 const CreateList = () => {
@@ -14,10 +15,15 @@ const CreateList = () => {
   const handleSaveList = () => {
     if (listName) {
       dispatch(addList({ name: listName, movies }));
-      dispatch(clearMovies());
+      movies.map((movie, index) => {
+        dispatch(clearMovies(index));
+        })
       setListName('');
-      
     }
+  };
+
+  const handleDeleteElement = (index) =>{
+    dispatch(deleteElement(index));
   };
 
   return (
@@ -31,7 +37,7 @@ const CreateList = () => {
       />
       <ul className='movie-list'>
       {movies.map((movie, index) => (
-        <li key={index}>{movie.name}</li>
+        <div className='list-element'><li key={index}>{movie.name}</li><div className='deleteBtn' onClick={()=> handleDeleteElement(movie.index)}>x</div></div>
       ))}
     </ul>
       <button className='saveBtn' onClick={handleSaveList}>
