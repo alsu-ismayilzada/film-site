@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { addList } from '../redux/listSlice';
+import { saveList } from '../redux/listSlice';
 import { clearMovies } from '../redux/moviesSlice';
 import { deleteElement } from '../redux/moviesSlice';
 import '../styles/CreateList.css';
@@ -13,7 +13,7 @@ const CreateList = () => {
 
   const handleSaveList = () => {
     if (listName) {
-      dispatch(addList({ name: listName, movies }));
+      dispatch(saveList({ name: listName, movies }));
       movies.map((movie, index) => {
         dispatch(clearMovies(index));
         })

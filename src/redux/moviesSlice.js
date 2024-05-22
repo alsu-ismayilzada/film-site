@@ -17,7 +17,7 @@ const moviesSlice = createSlice({
     },
     deleteElement: (state, action) => {
       state.splice(action.payload,1);
-    },
+    }
   }
 });
 

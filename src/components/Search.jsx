@@ -1,6 +1,4 @@
 // Search.js
-
-import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchMovies } from '../redux/moviesSearchSlice';
 import {add} from '../redux/inputValueSlice';

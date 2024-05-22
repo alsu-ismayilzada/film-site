@@ -1,8 +1,34 @@
 .MovieList{
-    width: 400px;
+    width: 450px;
     padding: 20px;
     box-sizing: border-box;
-    background-color: rgb(197, 245, 245);
+    background-color: rgb(237, 251, 251);
     margin-bottom: 20px;
     border-radius: 10px;
+}
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.MovieList h2{
+    margin: 0;
+}
+.list{
+    padding: 0;
+}
+.list img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.list .movieName{
+    width: 260px;
+    display: flex;
+    align-items: center;
+}
+.list li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }

@@ -2,13 +2,20 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addMovie } from '../redux/moviesSlice';
+// import { readMore } from '../redux/moviesSlice';
 import '../styles/MovieCard.css';
 
 const MovieCard = (props) => {
   const dispatch = useDispatch();
 
   const handleAddToList = () => {
-    dispatch(addMovie({ name: props.name, poster: props.poster }));
+    dispatch(addMovie({ name: props.name, poster: props.img }));
+  };
+  
+  const handleReadMore = (imdbID) => {
+    console.log(imdbID);
+    const imdbURL = `https://www.imdb.com/title/${imdbID}/`;
+    window.open(imdbURL, '_blank');
   };
 
   return (
@@ -19,7 +26,7 @@ const MovieCard = (props) => {
       <div className='right'>
         <p>{props.name}</p>
         <button onClick={handleAddToList}>Add to List</button>
-        <button>Read More</button>
+        <button onClick={()=>handleReadMore(props.imdbID)}>Read More</button>
       </div>
     </div>
   );

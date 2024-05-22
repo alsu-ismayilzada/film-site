@@ -1,0 +1,34 @@
+.Basket{
+    display: flex;
+    justify-content: space-between;
+}
+.Basket .left{
+    width: 400px;
+}
+.Basket .right{
+    width: 200px;
+}
+.Basket button{
+    width: 120px;
+    height: 30px;
+    background-color: rgb(10, 10, 179);
+    color: white;
+    border-radius: 3px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.goHomeBtn{
+    width: 120px;
+    height: 30px;
+    background-color: rgb(10, 10, 179);
+    color: white;
+    border-radius: 3px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+}

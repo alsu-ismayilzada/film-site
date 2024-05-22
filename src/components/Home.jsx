@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Search from "./Search";
 import "../styles/Home.css";
 import CreateList from './CreateList';
@@ -13,7 +13,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch(`https://www.omdbapi.com/?s=${inpValue}&apikey=7c0a2b78&limit=10`)
+    fetch(`https://www.omdbapi.com/?s=${inpValue}&apikey=7c0a2b78`)
       .then(res => res.json())
       .then(data => {
         if (data.Search) {
@@ -31,7 +31,7 @@ const Home = () => {
       </div>
       <div className='movies'>
         {moviesSearchList.map((movie, index) => (
-          <MovieCard key={index} img={movie.Poster} name={movie.Title} />
+          <MovieCard key={index} img={movie.Poster} name={movie.Title} imdbID={movie.imdbID} />
         ))}
       </div>
     </div>

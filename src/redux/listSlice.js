@@ -6,7 +6,7 @@ const listSlice = createSlice({
   name: 'lists',
   initialState,
   reducers: {
-    addList: (state, action) => {
+    saveList: (state, action) => {
       state.push({ name: action.payload.name, movies: action.payload.movies });
     },
     addMovieToList: (state, action) => {
@@ -19,8 +19,11 @@ const listSlice = createSlice({
         }
       }
     },
+    deleteList: (state, action)=>{
+      state.splice(action.payload,1);
+    }
   },
 });
 
-export const { addList, addMovieToList } = listSlice.actions;
+export const { saveList, addMovieToList, deleteList } = listSlice.actions;
 export default listSlice.reducer;
