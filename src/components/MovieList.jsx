@@ -14,7 +14,7 @@ const MovieList = ({ list, listIndex }) => {
    }
   return (
     <div className='MovieList'>
-      <div className='header'><h2>ListName: {list.name}</h2><button onClick={() => handleDeleteList(listIndex)}>Delete list</button></div>
+      <div className='header'><h2>{list.name}</h2><button onClick={() => handleDeleteList(listIndex)}>Delete list</button></div>
       <hr></hr>
       <ul className='list'>
         {list.movies.map((movie, index) => (
