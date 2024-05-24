@@ -1,10 +1,11 @@
 .MovieList{
-    width: 450px;
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
     background-color: rgb(237, 251, 251);
     margin-bottom: 20px;
     border-radius: 10px;
+    border: 0.5px solid rgb(187, 187, 187);
 }
 .header{
     display: flex;
@@ -23,7 +24,8 @@
     border-radius: 50%;
 }
 .list .movieName{
-    width: 260px;
+    width: 36.8vw;
+    max-width: 260px;
     display: flex;
     align-items: center;
 }
@@ -31,4 +33,14 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 760px) {
+    .list img{
+        width: 40px;
+        height: 40px;
+    }
+    .MovieList{
+        padding: 10px;
+    }
 }

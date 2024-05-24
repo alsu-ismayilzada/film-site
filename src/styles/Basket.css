@@ -3,7 +3,9 @@
     justify-content: space-between;
 }
 .Basket .left{
-    width: 400px;
+    width: 81%;
+    max-width: 450px;
+    min-width: 290px;
 }
 .Basket .right{
     width: 200px;
@@ -23,6 +25,7 @@
 .goHomeBtn{
     width: 120px;
     height: 30px;
+    margin-bottom: 30px;
     background-color: rgb(10, 10, 179);
     color: white;
     border-radius: 3px;
@@ -31,4 +34,11 @@
     text-align: center;
     box-sizing: border-box;
     padding: 5px;
+}
+@media screen and (min-width: 300px) and (max-width: 760px) {
+    .Basket{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

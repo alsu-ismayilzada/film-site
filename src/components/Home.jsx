@@ -5,7 +5,7 @@ import CreateList from './CreateList';
 import {useDispatch ,useSelector } from 'react-redux';
 import MovieCard from './MovieCard';
 import { searchMovies } from '../redux/moviesSearchSlice';
-
+import Page from "../images/404-page.png" ;
 
 const Home = () => {
   const inpValue = useSelector((state) => state.inputValue);
@@ -22,7 +22,7 @@ const Home = () => {
         }
       });
   }, []); 
-
+   console.log(moviesSearchList.length);
   return (
     <div className='home'>
       <div className='footer'>
@@ -30,9 +30,9 @@ const Home = () => {
         <CreateList />
       </div>
       <div className='movies'>
-        {moviesSearchList.map((movie, index) => (
+        {moviesSearchList.length > 0 ? moviesSearchList.map((movie, index) => (
           <MovieCard key={index} img={movie.Poster} name={movie.Title} imdbID={movie.imdbID} />
-        ))}
+        )) : (<div className='error'><img src={Page} alt="404"/><div className='errorMessage'>Movie Not Found!</div></div>)}
       </div>
     </div>
   )

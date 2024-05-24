@@ -7,7 +7,13 @@ export const searchMovies = createAsyncThunk(
   async (searchTerm) => {
     const response = await fetch(`https://www.omdbapi.com/?apikey=7c0a2b78&s=${searchTerm}`);
     const data = await response.json();
-    return data.Search; 
+    console.log(data.Response);
+    if(data.Response === "True"){
+      return data.Search;
+    }else{
+      return [];
+    }
+    
   }
 );
 

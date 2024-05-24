@@ -1,6 +1,8 @@
 
 .movieCard{
-    width: 450px;
+    width: 39.2vw;
+    max-width: 500px;
+    min-width: 290px;
     display: flex;
     justify-content: space-around;
     padding: 20px 20px;
@@ -12,6 +14,7 @@
     width: 45%;
 }
 .left img{
+    margin: 0;
     width: 150px;
     height: 150px;
 }
@@ -33,4 +36,36 @@ p{
     color: white;
     border-radius: 3px;
     border: none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 760px) {
+    .movieCard{
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .left{
+        width: 100%;
+        text-align: center;
+    }
+    .right{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0 20px 0 20px;
+    }
+    .left img{
+        width: 130px;
+        height: 130px;
+    }
+    .right p{
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
 }

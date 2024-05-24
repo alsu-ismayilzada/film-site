@@ -12,6 +12,8 @@ const MovieList = ({ list, listIndex }) => {
     console.log(key);
       dispatch(deleteList(key));
    }
+   
+
   return (
     <div className='MovieList'>
       <div className='header'><h2>{list.name}</h2><button onClick={() => handleDeleteList(listIndex)}>Delete list</button></div>

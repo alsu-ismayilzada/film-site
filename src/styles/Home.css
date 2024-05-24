@@ -1,11 +1,15 @@
 
+.home{
+    position: relative;
+    padding-top: 20px;
+}
 button{
     cursor: pointer;
 }
 .search{
     display: flex;
     width: 300px;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 input{
@@ -22,8 +26,11 @@ input{
 }
 .footer{
     display: flex;
+    min-width: 300px;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    /* height: 130px; */
 }
 .movies{
     width: 70vw;
@@ -32,3 +39,35 @@ input{
     flex-direction: column;
 
 }
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home img{
+    width: 31vw;
+}
+.home .errorMessage{
+    font-size: 30px;
+    width: 31vw;
+    margin-top: 20px;
+    color: #68E2FD;
+    font-weight: 800;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 760px) {
+    .footer{
+        /* height: 190px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* flex-wrap: wrap; */
+    
+    }
+    .movies{
+        align-items: center;
+    }
+    
+  }
+  
