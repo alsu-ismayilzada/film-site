@@ -1,11 +1,14 @@
 .Basket{
     display: flex;
     justify-content: space-between;
+    min-width: 300px;
 }
 .Basket .left{
     width: 81%;
     max-width: 450px;
-    min-width: 290px;
+    min-width: 270px;
+    display: flex;
+    flex-direction: column;
 }
 .Basket .right{
     width: 200px;
@@ -39,6 +42,12 @@
     .Basket{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
+    }
+    .Basket .right{
+        padding: 10px;
+    }
+    .goHomeBtn{
+        margin-bottom: 0px;
     }
 }

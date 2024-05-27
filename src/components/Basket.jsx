@@ -9,9 +9,10 @@ const Basket = () => {
 
   return (
     <div className='Basket'>
-      <NavLink to='/' className='goHomeBtn'>
+      <div className='right'><NavLink to='/' className='goHomeBtn'>
         Go to Home
       </NavLink>
+      </div>
       <div className='left'>
         {lists.map((list, index) => (
         <MovieList key={index} list={list} listIndex={index} />

@@ -2,7 +2,7 @@
 .create-list{
     padding: 10px;
     width: 38vw;
-    min-width: 300px;
+    min-width: 270px;
     max-width: 320px;
     box-sizing: border-box;
     display: flex;
@@ -16,7 +16,7 @@
 }
 .create-list input{
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .create-list .saveBtn{
     width: 60px;

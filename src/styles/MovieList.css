@@ -27,7 +27,6 @@
     width: 36.8vw;
     max-width: 260px;
     display: flex;
-    align-items: center;
 }
 .list li{
     display: flex;

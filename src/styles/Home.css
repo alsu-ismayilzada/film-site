@@ -8,16 +8,16 @@ button{
 }
 .search{
     display: flex;
-    width: 300px;
+    width: 270px;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 input{
-    width: 200px;
+    width: 180px;
     height: 25px;
 }
 .searchBtn{
-    width: 80px;
+    width: 70px;
     height: 30px;
     background-color: rgb(10, 10, 179);
     color: white;
