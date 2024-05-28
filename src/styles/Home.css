@@ -33,11 +33,10 @@ input{
     /* height: 130px; */
 }
 .movies{
-    width: 70vw;
+    width: 75vw;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-
 }
 .error{
     display: flex;
@@ -46,17 +45,19 @@ input{
 }
 .home img{
     width: 31vw;
+    min-width: 165px;
 }
 .home .errorMessage{
     font-size: 30px;
     width: 31vw;
+    min-width: 165px;
     margin-top: 20px;
     color: #68E2FD;
     font-weight: 800;
 }
 
 
-@media screen and (min-width: 300px) and (max-width: 760px) {
+@media screen and (min-width: 300px) and (max-width: 700px) {
     .footer{
         /* height: 190px; */
         display: flex;
@@ -69,5 +70,13 @@ input{
         align-items: center;
     }
     
+}
+   
+@media screen and (min-width: 700px) and (max-width: 760px) {
+    .movies{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
   }
   

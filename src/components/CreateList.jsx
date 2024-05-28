@@ -7,7 +7,7 @@ import { deleteElement } from '../redux/moviesSlice';
 import '../styles/CreateList.css';
 
 const CreateList = () => {
-  const [listName, setListName] = useState('');
+  const [listName, setListName] = useState('New List');
   const movies = useSelector((state) => state.movies);
   const dispatch = useDispatch();
 
