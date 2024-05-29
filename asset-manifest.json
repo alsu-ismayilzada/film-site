@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/film-site/static/css/main.703c66e6.css",
+    "main.js": "/film-site/static/js/main.c344f0ba.js",
+    "static/media/404-page.png": "/film-site/static/media/404-page.ee913bf724ee28e90d36.png",
+    "index.html": "/film-site/index.html",
+    "main.703c66e6.css.map": "/film-site/static/css/main.703c66e6.css.map",
+    "main.c344f0ba.js.map": "/film-site/static/js/main.c344f0ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.703c66e6.css",
+    "static/js/main.c344f0ba.js"
+  ]
+}
