@@ -12,7 +12,7 @@ const Search = () => {
   };
 
   const handleChange = (e) => {
-    dispatch(add(e.target.value.trim()));
+    dispatch(add(e.target.value));
   };
 
   return (

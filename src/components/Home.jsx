@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect , useState } from 'react';
 import Search from "./Search";
 import "../styles/Home.css";
 import CreateList from './CreateList';
@@ -11,8 +11,11 @@ const Home = () => {
   const inpValue = useSelector((state) => state.inputValue);
   const moviesSearchList = useSelector((state) => state.moviesSearch);
   const dispatch = useDispatch();
+  const [inpError, setInpError] = useState("");
+
 
   useEffect(() => {
+    if(inpValue.length > 2){
     fetch(`https://www.omdbapi.com/?s=${inpValue}&apikey=7c0a2b78`)
       .then(res => res.json())
       .then(data => {
@@ -21,7 +24,11 @@ const Home = () => {
           dispatch(searchMovies(inpValue));
         }
       });
-  }, []); 
+      setInpError("");
+    }else{
+      setInpError("Enter at least 3 characters to search!");
+    }
+  }, [inpValue, dispatch]); 
    console.log(moviesSearchList.length);
   return (
     <div className='home'>
@@ -29,6 +36,7 @@ const Home = () => {
         <Search />
         <CreateList />
       </div>
+      <p className='inpError'>{inpError}</p>
       <div className='movies'>
         {moviesSearchList.length > 0 ? moviesSearchList.map((movie, index) => (
           <MovieCard key={index} img={movie.Poster} name={movie.Title} imdbID={movie.imdbID} />

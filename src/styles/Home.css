@@ -55,6 +55,10 @@ input{
     color: #68E2FD;
     font-weight: 800;
 }
+.home .inpError{
+    color: red;
+    font-size: 23px;
+}
 
 
 @media screen and (min-width: 300px) and (max-width: 700px) {

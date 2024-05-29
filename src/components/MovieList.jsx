@@ -6,13 +6,13 @@ import {deleteList} from "../redux/listSlice";
 
 const MovieList = ({ list, listIndex }) => {
   const dispatch = useDispatch();
-// console.log(list);
-// console.log(listIndex);
    const handleDeleteList = (key) =>{
     console.log(key);
       dispatch(deleteList(key));
    }
-   
+const handleReadMore = () =>{
+  
+}   
 
   return (
     <div className='MovieList'>
@@ -20,7 +20,7 @@ const MovieList = ({ list, listIndex }) => {
       <hr></hr>
       <ul className='list'>
         {list.movies.map((movie, index) => (
-          <li key={index}><img src={movie.poster} alt="poster" /><div className='movieName'>{movie.name}</div></li>
+          <li key={index}><img src={movie.poster} alt="poster" /><div onClick={handleReadMore()} className='movieName'>{movie.name}</div></li>
         ))}
       </ul>
     </div>
